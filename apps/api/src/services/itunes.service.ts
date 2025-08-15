@@ -2,6 +2,14 @@ import axios from "axios";
 import http from "http";
 import https from "https";
 
+export interface Track {
+  trackId: number;
+  artistName: string;
+  trackName: string;
+  feedUrl: string;
+  artworkUrl600: string;
+}
+
 const axiosInstance = axios.create({
   baseURL: "https://itunes.apple.com",
   httpAgent: new http.Agent({ keepAlive: false }),
@@ -13,9 +21,9 @@ const axiosInstance = axios.create({
   },
 });
 
-export async function searchItunes(term: string, media: string = "podcast") {
-  const response = await axiosInstance.get("/search", {
-    params: { term, media },
+export async function searchItunes(term: string) {
+  const response = await axiosInstance.get<{ results: Track[] }>("/search", {
+    params: { term, media: "podcast" },
   });
-  return response.data;
+  return response.data.results;
 }

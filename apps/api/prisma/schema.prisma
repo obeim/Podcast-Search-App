@@ -8,12 +8,16 @@ datasource db {
 }
 
 model Podcast {
-  id          Int     @id @default(autoincrement())
-  trackId     Int     @unique
-  trackName   String
-  artistName  String
-  artworkUrl  String?
-  feedUrl     String?
-  searchedTerm        String?
-  createdAt   DateTime @default(now())
+  trackId      Int           @id
+  trackName    String
+  artistName   String
+  artworkUrl   String
+  feedUrl      String
+  searchTerms  SearchTerm[]  
+}
+
+model SearchTerm {
+  id       Int        @id @default(autoincrement())
+  term     String     @unique
+  podcasts Podcast[]  
 }
