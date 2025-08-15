@@ -1,6 +1,6 @@
 import Fastify from "fastify";
 import cors from "@fastify/cors";
-import prismaPlugin from "./plugins/prisma.ts";
+import prismaPlugin from "./plugins/prisma.js";
 import searchRoutes from "./routes/search.js";
 
 const server = Fastify({

@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import { searchItunes } from "../services/itunes.service.ts";
+import { searchItunes } from "../services/itunes.service.js";
 import { Podcast } from "@prisma/client";
 
 export default async function searchRoutes(fastify: FastifyInstance) {
