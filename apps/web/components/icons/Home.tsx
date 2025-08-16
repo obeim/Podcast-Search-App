@@ -28,8 +28,8 @@ const HomeIcon = ({ active }: { active?: boolean }) => {
           y2="23.8082"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E86492" />
-          <stop offset="1" stop-color="#6061C1" />
+          <stop stopColor="#E86492" />
+          <stop offset="1" stopColor="#6061C1" />
         </linearGradient>
         <linearGradient
           id="paint1_linear"
@@ -39,8 +39,8 @@ const HomeIcon = ({ active }: { active?: boolean }) => {
           y2="29.8619"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E86492" />
-          <stop offset="1" stop-color="#6061C1" />
+          <stop stopColor="#E86492" />
+          <stop offset="1" stopColor="#6061C1" />
         </linearGradient>
         <linearGradient
           id="paint2_linear"
@@ -50,8 +50,8 @@ const HomeIcon = ({ active }: { active?: boolean }) => {
           y2="29.1119"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E86492" />
-          <stop offset="1" stop-color="#6061C1" />
+          <stop stopColor="#E86492" />
+          <stop offset="1" stopColor="#6061C1" />
         </linearGradient>
       </defs>
     </svg>
@@ -67,8 +67,8 @@ const HomeIcon = ({ active }: { active?: boolean }) => {
         d="M5.42,26.29C2.29,30.9.64,34.83,1.07,37.06a2.35,2.35,0,0,0,.61,1.26C4.45,41.1,14.91,35.15,25,25S41.1,4.45,38.32,1.67a2.35,2.35,0,0,0-1.26-.61c-2.09-.4-5.7,1-10,3.82"
         fill="none"
         stroke="#fff"
-        stroke-miterlimit="10"
-        stroke-width="2"
+        strokeMiterlimit="10"
+        strokeWidth="2"
       />
       <circle
         cx="19.99"
@@ -76,8 +76,8 @@ const HomeIcon = ({ active }: { active?: boolean }) => {
         r="16.01"
         fill="none"
         stroke="#fff"
-        stroke-miterlimit="10"
-        stroke-width="2"
+        strokeMiterlimit="10"
+        strokeWidth="2"
       />
     </svg>
   );
