@@ -1,85 +1,46 @@
-# Monorepo: Next.js + Fastify
+# Podcast Search App  
 
-This repository is a Turborepo monorepo with two apps and shared configs.
+A modern podcast search application built with **Next.js** and **Fastify**, featuring real-time search capabilities using the iTunes API with caching and persistence.  
 
-## Using this example
+## Overview  
 
-Run the following command:
+This application lets users search for podcasts using the iTunes API with improved performance through caching and database persistence. It demonstrates how to design a full-stack project with scalable backend APIs and a responsive frontend.  
 
-```sh
-npx create-turbo@latest
-```
+### Features  
+- **Podcast search** with iTunes API integration  
+- **Smart caching system** to reduce duplicate API calls  
+- **Modern responsive UI** built with Tailwind CSS  
+- **Database persistence** using PostgreSQL + Prisma ORM  
+- **Monorepo architecture** powered by Turborepo for efficient development  
+- **Docker support** for local and production environments  
 
-## What's inside?
+---
 
-This Turborepo includes the following packages/apps:
+## Architecture  
 
-### Apps and Packages
+This project is organized as a Turborepo monorepo with two main apps:  
 
-- `apps/web`: Next.js 15 + Tailwind CSS
-- `apps/api`: Fastify (TypeScript)
-- `@repo/ui`: Minimal React UI shared by apps
-- `@repo/eslint-config`: shared ESLint configs
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- **`apps/web`** → Next.js 15 frontend with Tailwind CSS  
+- **`apps/api`** → Fastify backend API with TypeScript and Prisma  
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### Key Highlights  
+- **Search Caching**: Results persisted in PostgreSQL to improve performance  
+- **iTunes Integration**: Real-time podcast data via iTunes Search API  
+- **Type Safety**: Full TypeScript implementation across frontend and backend  
+- **Modern Stack**: Latest Next.js 15, React 19, Fastify, Prisma  
 
-### Utilities
+---
 
-This Turborepo has some additional tools already setup for you:
+## Getting Started  
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+### Prerequisites  
+- Node.js ≥ 18  
+- pnpm ≥ 9 (recommended)  
+- PostgreSQL instance  
 
-### Build
+### Setup  
 
-```sh
-pnpm build
-```
-
-You can build a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
-
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-```
-
-### Develop
-
-```sh
-pnpm dev
-```
-
-You can develop a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
-
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
-
-### URLs
-
-- Web: http://localhost:3000
-- API: http://localhost:4000
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+```bash
+git clone <repository-url>
+cd podcast-search-app
+pnpm install

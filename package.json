@@ -1,5 +1,5 @@
 {
-  "name": "thmanyah-fullstack-assesment",
+  "name": "podcast-search-app",
   "private": true,
   "scripts": {
     "build": "turbo run build",

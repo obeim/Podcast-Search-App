@@ -2,17 +2,17 @@ version: "3.9"
 services:
   db:
     image: postgres:16
-    container_name: thmanyah_db
+    container_name: podcast_db
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: thmanyah
+      POSTGRES_DB: podcast
     ports:
       - "5432:5432"
     volumes:
       - dbdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d thmanyah"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d podcast"]
       interval: 3s
       timeout: 3s
       retries: 10
@@ -21,10 +21,10 @@ services:
     build:
       context: ./apps/api
       dockerfile: Dockerfile
-    container_name: thmanyah_api
+    container_name: podcast_api
     environment:
       PORT: 3001
-      DATABASE_URL: postgresql://postgres:postgres@db:5432/thmanyah?schema=public
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/podcast?schema=public
       CORS_ORIGIN: http://localhost:3000
       NODE_ENV: production
     depends_on:
@@ -37,7 +37,7 @@ services:
     build:
       context: ./apps/web
       dockerfile: Dockerfile
-    container_name: thmanyah_web
+    container_name: podcast_web
     environment:
       NODE_ENV: production
       NEXT_PUBLIC_API_URL: http://api:3001
