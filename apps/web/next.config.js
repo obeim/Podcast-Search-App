@@ -4,6 +4,16 @@ const nextConfig = {
     // Workaround for a Windows path normalization bug between TS and Next
     ignoreBuildErrors: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "*",
+        port: "",
+        search: "",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
