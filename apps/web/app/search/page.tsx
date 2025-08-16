@@ -22,7 +22,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   return (
     <div className="space-y-4">
       {term && (
-        <div className="pt-5 pb-3 border-b border-border-subtle">
+        <div className="pt-5 pb-3 border-b bg-background z-20 border-border-subtle sticky top-10">
           <h1 className="text-white font-semibold px-4">
             Top podcasts for {term}
           </h1>

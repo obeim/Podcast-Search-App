@@ -54,7 +54,7 @@ export default function RootLayout({
         {/* Main content */}
         <div className="flex-1 md:ml-[225px] flex flex-col">
           {/* Header */}
-          <header className="flex gap-3 py-2 px-4 items-center">
+          <div className="flex gap-3 py-2 px-4 items-center sticky z-20 bg-background top-0">
             <NavArrows />
             <SearchBar />
             <div className="md:flex hidden gap-2 text-[13px] ml-auto md:!w-[168px] items-center">
@@ -64,7 +64,7 @@ export default function RootLayout({
             <span>
               <ThreeDots className="h-full fill-white/70 hover:fill-white cursor-pointer" />
             </span>
-          </header>
+          </div>
 
           {/* Page content */}
           <main className="flex-1  py-6">{children}</main>
