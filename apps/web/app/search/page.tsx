@@ -7,7 +7,8 @@ interface SearchPageProps {
 }
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {
-  const term = searchParams.q?.trim();
+  const params = await searchParams;
+  const term = params.q?.trim();
   let results: Podcast[] = [];
 
   if (term) {
@@ -34,9 +35,10 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
       )}
 
       {term && results.length === 0 && (
-        <p className="text-white/70">No results found for "{term}"</p>
+        <p className="text-white/70 text-center py-10">
+          No results found for "{term}"
+        </p>
       )}
-
       {results.length > 0 && <PodcastResults results={results} />}
     </div>
   );

@@ -2,7 +2,7 @@ const ThreeDots = ({ className }: { className?: string }) => {
   return (
     <svg
       className={className}
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 24 24"
       height="22"
       width="22"

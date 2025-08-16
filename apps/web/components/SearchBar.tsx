@@ -25,7 +25,7 @@ export default function SearchBar() {
         if (!e.target.value) debouncedSearch(e.target.value);
       }}
       className="
-      w-full rounded-[10px] py-1 h-8 text-center text-white outline-none
+      xl:w-[90%] md:w-[70%] w-full rounded-[10px] py-1 h-8 text-center text-white outline-none
       border border-white/30 bg-background-input placeholder:text-sm
       placeholder:text-white/40
       focus:border-border-accent focus:bg-white/5 focus:placeholder:opacity-0
