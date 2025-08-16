@@ -12,10 +12,6 @@ server.register(prismaPlugin);
 
 server.register(searchRoutes);
 
-server.get("/health", async () => {
-  return { ok: true };
-});
-
 server.get("/", async () => {
   return { message: "API is running" };
 });

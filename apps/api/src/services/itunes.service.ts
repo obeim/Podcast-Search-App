@@ -6,7 +6,6 @@ export interface Track {
   trackId: number;
   artistName: string;
   trackName: string;
-  feedUrl: string;
   artworkUrl600: string;
 }
 
