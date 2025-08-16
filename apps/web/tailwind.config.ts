@@ -4,6 +4,10 @@ export default {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        "2xl": "1450px",
+        "3xl": "1670px",
+      },
       colors: {
         background: {
           DEFAULT: "#161727", // main app background

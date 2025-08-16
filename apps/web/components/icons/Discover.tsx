@@ -43,8 +43,8 @@ const Discover = ({ active }: { active?: boolean }) => {
           y2="40.3931"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#38DEE6" />
-          <stop offset="1" stop-color="#208890" />
+          <stop stopColor="#38DEE6" />
+          <stop offset="1" stopColor="#208890" />
         </linearGradient>
         <linearGradient
           id="paint2_linear"
@@ -54,8 +54,8 @@ const Discover = ({ active }: { active?: boolean }) => {
           y2="31.1825"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#38DEE6" />
-          <stop offset="1" stop-color="#208890" />
+          <stop stopColor="#38DEE6" />
+          <stop offset="1" stopColor="#208890" />
         </linearGradient>
         <linearGradient
           id="paint3_linear"
@@ -65,8 +65,8 @@ const Discover = ({ active }: { active?: boolean }) => {
           y2="13.5071"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#246F73" />
-          <stop offset="1" stop-color="#208890" />
+          <stop stopColor="#246F73" />
+          <stop offset="1" stopColor="#208890" />
         </linearGradient>
       </defs>
     </svg>
