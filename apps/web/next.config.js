@@ -8,9 +8,8 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "*",
-        port: "",
-        search: "",
+        hostname: "**.mzstatic.com",
+        pathname: "/**",
       },
     ],
   },
