@@ -105,8 +105,7 @@ pnpm dev --filter=api
 
 - **Frontend**: http://localhost:3000
 - **API**: http://localhost:4000
-- **API Health Check**: http://localhost:4000/health
-
+  
 ### Building for Production
 
 **Build all apps:**
